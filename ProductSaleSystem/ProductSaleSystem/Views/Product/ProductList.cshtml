@@ -1,0 +1,31 @@
+﻿@model IEnumerable<ProductDTO>
+<div class="container w-75">
+    <div class="row">
+        @foreach (var product in Model)
+        {
+            <div class="col-md-6 shadow-4 hover">
+                <div class="card mb-5">
+                    <div class="d-flex justify-content-center">
+                        <img src="@product.ImagePath" class="card-img-top w-50 h-25" alt="...">
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title text-center text-uppercase fw-bold h4 text">@product.ProductName</h5>
+                        <p class="card-text text-uppercase text-center"><span class="fw-bold">Ürün Fiyatı:</span> @product.SellingPrice</p>
+                        <p class="card-text text-uppercase text-center"><span class="fw-bold">Stok:</span> @product.ProductStock</p>
+
+                        <div class="text-center">
+                            <div class="radio-label">
+                                <input type="radio" id="sec" name="options">
+                                <label for="sec">seç</label>
+                            </div>
+                            <a href="/Product/UpdateProduct/@product.Id" class="btn btn-primary">Güncelle</a>
+                            <a href="/Product/DeleteProduct/@product.Id" class="btn btn-danger">Sil</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        }
+
+    </div>
+</div>

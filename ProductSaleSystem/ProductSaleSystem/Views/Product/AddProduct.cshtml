@@ -1,0 +1,40 @@
+﻿@model ProductDTO
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-header bg-dark text-white text-center text-uppercase">
+                    Ürün Ekle
+                </div>
+                <div class="card-body">
+                    <form asp-action="AddProduct" method="post" enctype="multipart/form-data">
+                        <div class="mb-3">
+                            <label class="form-label">Ürün Adı</label>
+                            <input type="text" class="form-control" asp-for="ProductName" required>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Alış Fiyatı</label>
+                            <input type="number" class="form-control" asp-for="PurchasePrice" required>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Satış Fiyatı</label>
+                            <input type="number" class="form-control" asp-for="SellingPrice" required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Stok</label>
+                            <input type="number" class="form-control" asp-for="ProductStock" required>
+                        </div>
+                        <div class="form-group my-2">
+                            <label>Dosya Seç:</label>
+                            <input type="file" id="file" asp-for="FormFile" />
+                        </div>
+                        
+
+                        <button type="submit" class="btn btn-dark mx-auto d-grid w-100 mt-3 text-uppercase">Ürün Ekle</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
