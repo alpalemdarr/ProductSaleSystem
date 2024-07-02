@@ -1,0 +1,1 @@
+In this project, I developed an MVC application with .Net 7.0. There are product add-delete and update operations, I performed these operations by connecting SQL and as a result of all operations, I can view the SQL server.
